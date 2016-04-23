@@ -35,19 +35,12 @@ chrome.extension.sendMessage({}, function(response) {
 	}, 10);
 });
 
-
 //once the url changes
-chrome.tabs.onUpdated.addListener(function( tabId,  changeInfo,  tab) {
-	
-	if(changeInfo.url) {
-		//url has changed
-		//start looking for sidebar (if timeout is not yet in progress)
-		if(!findsidebartimeout) {
-			//find the sidebar
-			findsidebar();
-		}
-		
-		
+window.addEventListener("hashchange", function() {
+	//url has changed
+	//start looking for sidebar (if timeout is not yet in progress)
+	if(!findsidebartimeout) {
+		//find the sidebar
+		findsidebar();
 	}
-	
-});
+}, false);

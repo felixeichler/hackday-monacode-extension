@@ -2,7 +2,7 @@
 
 angular.module('monacode', [])
 .component('monacode', {
-  templateUrl: chrome.extension.getURL('templates/monocode.html'),
+  templateUrl: chrome.extension.getURL('templates/monacode.html'),
   controller: function() {
     var ctrl = this;
     ctrl.user = {
@@ -12,7 +12,7 @@ angular.module('monacode', [])
   }
 })
 .component('monacodeUser', {
-  templateUrl: chrome.extension.getURL('templates/monocode-user.html'),
+  templateUrl: chrome.extension.getURL('templates/monacode-user.html'),
   controller: function() {
     var ctrl = this;
   },
