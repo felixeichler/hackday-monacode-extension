@@ -39,5 +39,9 @@
       "src/background/csp.js"
     ],
     "persistent": true
-  }
+  },
+  "web_accessible_resources": ["templates/monacode.html",
+    "templates/monacode-user.html",
+    "templates/monacode-networks.html",
+  "templates/*.html"]
 }
