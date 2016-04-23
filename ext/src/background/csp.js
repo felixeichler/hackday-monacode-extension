@@ -1,4 +1,4 @@
-var hosts = ''+chrome.extension.getURL();
+var hosts = ''+chrome.extension.getURL('');
 
 chrome.webRequest.onHeadersReceived.addListener(function(details) {
   for (var i = 0; i < details.responseHeaders.length; i++) {
