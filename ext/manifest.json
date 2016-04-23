@@ -5,9 +5,8 @@
   "description": "Burda Hackday 2016! Team MONACODE! Let's rock and roll! :)",
   "homepage_url": "https://github.com/felixeichler/hackday-monacode-extension",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "32": "icons/monacode-32.png",
+    "128": "icons/monacode-128.png"
   },
   "default_locale": "en",
   "permissions": [
