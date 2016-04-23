@@ -1,6 +1,6 @@
 {
   "name": "Monacode Extension for Gmail",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "manifest_version": 2,
   "description": "Burda Hackday 2016! Team MONACODE! Let's rock and roll! :)",
   "homepage_url": "https://github.com/felixeichler/hackday-monacode-extension",
@@ -11,7 +11,10 @@
   },
   "default_locale": "en",
   "permissions": [
-    "https://mail.google.com/*"
+    "https://mail.google.com/*",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
   ],
   "content_scripts": [
     {
@@ -30,5 +33,11 @@
         "src/inject/inject.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "scripts": [
+      "src/background/csp.js"
+    ],
+    "persistent": true
+  }
 }
