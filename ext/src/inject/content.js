@@ -14,9 +14,22 @@ angular.module('monacode', [])
   controller: function() {
     var ctrl = this;
     ctrl.user = {
+      name: "Felix Eichler",
       email: document.querySelector('span.gD').getAttribute('email'),
-      name: "Felix Eichler ",
-      imageurl: "https://www.xing.com/image/9_d_7_75e92aaae_22366807_2/felix-eichler-foto.256x256.jpg"
+      imageurl: "https://www.xing.com/image/9_d_7_75e92aaae_22366807_2/felix-eichler-foto.256x256.jpg",
+      networks: [{
+        name: "Xing",
+        color: "xing",
+        counter: "!"
+      },{
+        name: "@felix",
+        color: "twitter",
+        counter: "4"
+      },{
+        name: "Google+",
+        color: "gplus",
+        counter: "6"
+      }]
     }
   }
 })
@@ -29,11 +42,30 @@ angular.module('monacode', [])
     user: '<'
   }
 })
-.component('monacodeNetwors', {
-  templateUrl: chrome.extension.getURL('templates/monocode-networks.html'),
+.component('monacodeNetworks', {
+  templateUrl: chrome.extension.getURL('templates/monacode-networks.html'),
   controller: function() {
     var ctrl = this;
   },
   bindings: {
+    networks: '<'
+  }
+})
+.component('monacodeNetwork', {
+  templateUrl: chrome.extension.getURL('templates/monacode-network.html'),
+  controller: function() {
+    var ctrl = this;
+  },
+  bindings: {
+    network: '<'
+  }
+})
+.component('monacodeConnections', {
+  templateUrl: chrome.extension.getURL('templates/monacode-connections.html'),
+  controller: function() {
+    var ctrl = this;
+  },
+  bindings: {
+    connections: '<'
   }
 });

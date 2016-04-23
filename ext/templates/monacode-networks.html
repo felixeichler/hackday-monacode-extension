@@ -1,17 +1,1 @@
-<div class="monacode-u-clearfix monacode-network">
-  <div class="monacode-helper monacode-network-icon monacode-color-xing">!</div>
-  <div class="monacode-helper monacode-network-name">Xing</div>
-  <div class="monacode-helper monacode-network-connect-done">
-    <span class="monacode-helpermonacode-btn-icon">w</span>&nbsp; connected
-  </div>
-</div>
-<div class="monacode-u-clearfix monacode-network">
-  <div class="monacode-helper monacode-network-icon monacode-color-twitter">4</div>
-  <div class="monacode-helper monacode-network-name">@felix</div>
-  <div class="monacode-helper monacode-network-connect">connect</div>
-</div>
-<div class="monacode-u-clearfix monacode-network">
-  <div class="monacode-helper monacode-network-icon monacode-color-gplus">6</div>
-  <div class="monacode-helper monacode-network-name">Google+</div>
-  <div class="monacode-helper monacode-network-connect">connect</div>
-</div>
+<monacode-network ng-repeat="network in $ctrl.networks" network="network"></monacode-network>
