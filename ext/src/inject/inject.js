@@ -9,12 +9,23 @@ chrome.extension.sendMessage({}, function(response) {
 		// ----------------------------------------------------------
 		
 		
-		var sidebarContainer = $('table[role="presentation"] div[role="complementary"] .u5');
-		console.log('sidebar complementary div found', sidebarContainer);
+		function findsidebar() {
+			var sidebarContainer = $('table[role="presentation"] div[role="complementary"] .u5');
+			if(sidebarContainer.length) {
+				//found sidebar!
+				console.log('sidebar div found', sidebarContainer);
+				//inject our thing into sidebar
+				var injectedElement = $('<div style="background:blue;color:white;padding:20px;font-size:20px;">hello world.</div>');
+				sidebarContainer.append(injectedElement);
+				console.log('injected element into sidebar',injectedElement);
+			} else {
+				//selector returned empty result
+				//try again in 500ms
+				setTimeout(findsidebar,500);
+			}
+		}
+		findsidebar();
 		
-		var injectedElement = $('<div style="background:blue;color:white;padding:20px;font-size:20px;">hello world.</div>');
-		sidebarContainer.append(injectedElement);
-		console.log('injected element into sidebar',injectedElement);
 		
 	}
 	}, 10);
