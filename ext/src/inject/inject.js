@@ -12,7 +12,9 @@ chrome.extension.sendMessage({}, function(response) {
 		var sidebarContainer = $('table[role="presentation"] div[role="complementary"] .u5');
 		console.log('sidebar complementary div found', sidebarContainer);
 		
-		sidebarContainer.append('<div style="background:blue;color:white;padding:20px;font-size:20px;">hello world.</div>');
+		var injectedElement = $('<div style="background:blue;color:white;padding:20px;font-size:20px;">hello world.</div>');
+		sidebarContainer.append(injectedElement);
+		console.log('injected element into sidebar',injectedElement);
 		
 	}
 	}, 10);
