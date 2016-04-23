@@ -1,6 +1,14 @@
 'use strict';
 
 angular.module('monacode', [])
+.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'chrome-extension://**'
+  ]);
+})
 .component('monacode', {
   templateUrl: chrome.extension.getURL('templates/monacode.html'),
   controller: function() {
@@ -18,5 +26,13 @@ angular.module('monacode', [])
   },
   bindings: {
     user: '<'
+  }
+})
+.component('monacodeNetwors', {
+  templateUrl: chrome.extension.getURL('templates/monocode-networks.html'),
+  controller: function() {
+    var ctrl = this;
+  },
+  bindings: {
   }
 });
