@@ -14,7 +14,8 @@ angular.module('monacode', [])
   controller: function() {
     var ctrl = this;
     ctrl.user = {
-      name: "Felix Eichler",
+      email: document.querySelector('span.gD').getAttribute('email'),
+      name: "Felix Eichler ",
       imageurl: "https://www.xing.com/image/9_d_7_75e92aaae_22366807_2/felix-eichler-foto.256x256.jpg"
     }
   }
