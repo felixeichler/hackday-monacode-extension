@@ -2,8 +2,8 @@
   "name": "Monacode Extension for Gmail",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Burda Hackday 2016! Team MONACODE! Let's rock and roll! :)",
+  "homepage_url": "https://github.com/felixeichler/hackday-monacode-extension",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
