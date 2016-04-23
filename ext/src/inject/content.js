@@ -13,9 +13,18 @@ angular.module('monacode', [])
   templateUrl: chrome.extension.getURL('templates/monacode.html'),
   controller: function() {
     var ctrl = this;
+    
+    //parse email from gmail DOM
+    var x = document.querySelectorAll('span.gD');
+    //last of array
+    var email = x[x.length-1].getAttribute('email')
+    
+    //TODO: send request to backend here, to actually load real user data
+    //      only thing we know so far is email
+    
     ctrl.user = {
       name: "Felix Eichler",
-      email: document.querySelector('span.gD').getAttribute('email'),
+      email: email,
       imageurl: "https://www.xing.com/image/9_d_7_75e92aaae_22366807_2/felix-eichler-foto.256x256.jpg",
       networks: [{
         name: "Xing",
