@@ -1,0 +1,193 @@
+.monacode-body {
+  max-width: 220px;
+  min-width: 220px;
+}
+
+.monacode-helper {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: auto;
+  display: inline-block;
+  overflow: visible;
+  width: auto;
+  height: auto;
+  max-height: none;
+  max-width: none;
+  min-height: 0px;
+  min-width: 0px;
+  margin: 0px;
+  padding: 0px;
+  float: none;
+  clear: none;
+  border: 0px none transparent;
+  border-radius: 0px;
+  background-color: transparent;
+  opacity: 1;
+  direction: ltr;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-indent: 0px;
+  text-transform: none;
+  -webkit-column-count: auto;
+  -moz-column-count: auto;
+  column-count: auto;
+  cursor: default;
+}
+
+.monacode-helper.monacode-user-name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.monacode-helper.monacode-user-image {
+  width: 80px;
+  height: 80px;
+  float: left;
+  border-radius: 4px;
+}
+
+.monacode-helper.monacode-user-email {
+  display: inline-block;
+}
+
+.monacode-helper.monacode-user-company {
+  display: inline-block;
+  color: #8d8d8d;
+  cursor: pointer;
+}
+
+.monacode-helper.monacode-user-company:hover {
+  color: #333;
+}
+
+.monacode-helper.monacode-user-location {
+  margin-top: 8px;
+}
+
+.monacode-helper.monacode-user-position {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.monacode-helper.monacode-network-icon {
+  top: 3px;
+  margin-right: 10px;
+  float: left;
+  font-family: Mocaode, sans-serif;
+  font-size: 18px;
+}
+
+.monacode-helper.monacode-network-icon.monacode-color-xing {
+  color: #006567;
+}
+
+.monacode-helper.monacode-network-icon.monacode-color-twitter {
+  color: #55acee;
+}
+
+.monacode-helper.monacode-network-icon.monacode-color-gplus {
+  color: #dd4b39;
+}
+
+.monacode-helper.monacode-network-name {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  float: left;
+}
+
+.monacode-helper.monacode-network-connect {
+  height: auto;
+  padding: 2px 8px;
+  float: right;
+  border-radius: 2px;
+  background-color: #448fff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.monacode-helper.monacode-network-connect:hover {
+  background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1));
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1));
+}
+
+.monacode-helper.monacode-network-connect:active {
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+}
+
+.monacode-helper.moancode-connections-detail {
+  margin-bottom: 10px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.monacode-helper.moancode-connections-common-img {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.monacode-helper.monacode-network-connect-done {
+  padding: 2px 8px;
+  float: right;
+  color: #09ad8d;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.monacode-helper.monacode-btn-icon {
+  font-family: Mocaode, sans-serif;
+}
+
+.monacode-user-info-container {
+  margin-left: 80px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.monacode-networks {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-network {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #e2e2e2;
+}
+
+.monacode-connections {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.test {
+  font-family: Mocaode, sans-serif;
+}
+
+@font-face {
+  font-family: 'Mocaode';
+  src: url('../fonts/mocaode.eot') format('embedded-opentype'), url('../fonts/mocaode.woff') format('woff'), url('../fonts/mocaode.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

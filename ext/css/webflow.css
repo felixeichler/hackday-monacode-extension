@@ -1,0 +1,206 @@
+/* Felix ist doof */
+
+.monacode-u-icon-slider-right:before {
+  content: "\e600";
+}
+.monacode-u-icon-slider-left:before {
+  content: "\e601";
+}
+.monacode-u-icon-nav-menu:before {
+  content: "\e602";
+}
+.monacode-u-icon-arrow-down:before,
+.monacode-u-icon-dropdown-toggle:before {
+  content: "\e603";
+}
+[class^="monacode-"],
+[class*=" monacode-"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html.monacode-u-mod-touch * {
+  background-attachment: scroll !important;
+}
+.monacode-u-block {
+  display: block;
+}
+.monacode-u-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+.monacode-u-clearfix:before,
+.monacode-u-clearfix:after {
+  content: " ";
+  display: table;
+}
+.monacode-u-clearfix:after {
+  clear: both;
+}
+.monacode-u-preserve-3d {
+  transform-style: preserve-3d;
+}
+.monacode-u-hidden {
+  display: none;
+}
+.monacode-u-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+input.monacode-u-button {
+  -webkit-appearance: button;
+}
+html[data-w-dynpage] [data-w-cloak] {
+  color: transparent !important;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+a:focus {
+  outline: 0;
+}
+blockquote {
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  border-left: 5px solid #E2E2E2;
+  font-size: 18px;
+  line-height: 22px;
+}
+figure {
+  margin: 0;
+  margin-bottom: 10px;
+}
+figcaption {
+  margin-top: 5px;
+  text-align: center;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+button,
+html input[type="button"],
+input[type="reset"] {
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+.monacode-u-form {
+  margin: 0 0 15px;
+}
+.monacode-u-form-done {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  background-color: #dddddd;
+}
+.monacode-u-form-fail {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffdede;
+}
+
+/* all labels deleted*/
+
+.monacode-u-input,
+.monacode-u-select {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+.monacode-u-input:-moz-placeholder,
+.monacode-u-select:-moz-placeholder {
+  color: #999;
+}
+.monacode-u-input::-moz-placeholder,
+.monacode-u-select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.monacode-u-input:-ms-input-placeholder,
+.monacode-u-select:-ms-input-placeholder {
+  color: #999;
+}
+.monacode-u-input::-webkit-input-placeholder,
+.monacode-u-select::-webkit-input-placeholder {
+  color: #999;
+}
+.monacode-u-input:focus,
+.monacode-u-select:focus {
+  border-color: #3898EC;
+  outline: 0;
+}
+.monacode-u-input[disabled],
+.monacode-u-select[disabled],
+.monacode-u-input[readonly],
+.monacode-u-select[readonly],
+fieldset[disabled] .monacode-u-input,
+fieldset[disabled] .monacode-u-select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+textarea.monacode-u-input,
+textarea.monacode-u-select {
+  height: auto;
+}
+.monacode-u-select {
+  background-image: -webkit-linear-gradient(white 0%, #f3f3f3 100%);
+  background-image: linear-gradient(white 0%, #f3f3f3 100%);
+}
+.monacode-u-select[multiple] {
+  height: auto;
+}
+.monacode-u-form-label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+.monacode-u-checkbox,
+.monacode-u-radio {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+.monacode-u-checkbox:before,
+.monacode-u-radio:before,
+.monacode-u-checkbox:after,
+.monacode-u-radio:after {
+  content: " ";
+  display: table;
+}
+.monacode-u-checkbox:after,
+.monacode-u-radio:after {
+  clear: both;
+}
+.monacode-u-checkbox-input,
+.monacode-u-radio-input {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+  float: left;
+  margin-left: -20px;
+}
+.monacode-u-radio-input {
+  margin-top: 3px;
+}
+
+/*col deleted, widgets, slider, lightbox, nav,  …*/

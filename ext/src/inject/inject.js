@@ -7,17 +7,19 @@ chrome.extension.sendMessage({}, function(response) {
 		// This part of the script triggers when page is done loading
 		console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
-		
-		
+
+
 		function findsidebar() {
 			var sidebarContainer = $('table[role="presentation"] div[role="complementary"] .u5');
 			if(sidebarContainer.length) {
 				//found sidebar!
 				console.log('sidebar div found', sidebarContainer);
 				//inject our thing into sidebar
-				var injectedElement = $('<div style="background:blue;color:white;padding:20px;font-size:20px;">hello world.</div>');
+				var injectedElement = $('<div ng-app="monacode"><monacode></monacode></div>');
 				sidebarContainer.append(injectedElement);
 				console.log('injected element into sidebar',injectedElement);
+
+				angular.bootstrap(injectedElement, ['monacode']);
 			} else {
 				//selector returned empty result
 				//try again in 500ms
@@ -25,9 +27,6 @@ chrome.extension.sendMessage({}, function(response) {
 			}
 		}
 		findsidebar();
-		
-		
 	}
 	}, 10);
 });
-
