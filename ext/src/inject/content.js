@@ -28,11 +28,21 @@ angular.module('monacode', [])
     user: '<'
   }
 })
-.component('monacodeNetwors', {
-  templateUrl: chrome.extension.getURL('templates/monocode-networks.html'),
+.component('monacodeNetworks', {
+  templateUrl: chrome.extension.getURL('templates/monacode-networks.html'),
   controller: function() {
     var ctrl = this;
   },
   bindings: {
+    networks: '<'
+  }
+})
+.component('monacodeConnections', {
+  templateUrl: chrome.extension.getURL('templates/monacode-connections.html'),
+  controller: function() {
+    var ctrl = this;
+  },
+  bindings: {
+    connections: '<'
   }
 });
