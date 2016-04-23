@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('monacode', [$sce])
+angular.module('monacode', [])
 .component('monacode', {
   templateUrl: chrome.extension.getURL('templates/monocode.html'),
   controller: function() {
