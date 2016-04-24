@@ -37,11 +37,14 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
       $http.get(requestUrl).then(
 
         function successCallback(response) {
+          console.log('request response',response);
+          
           //resolve promise
           resolve(response.data.content);
         },
 
         function errorCallback(response) {
+          console.log('request response',response);
           //reject promise
           console.error('error while loading profile',response);
           reject(response);
