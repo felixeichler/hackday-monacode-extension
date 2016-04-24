@@ -564,3 +564,11 @@ monacode>*{
   border-bottom: 1px solid #e2e2e2;
   padding: 10px 0 ;
 }
+
+.u5 {
+  overflow: auto !important; 
+}
+
+.u5::-webkit-scrollbar {
+  display: none;
+}
