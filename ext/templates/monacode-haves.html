@@ -3,4 +3,4 @@
   <div class="monacode-helper monacode-network-name">Haves</div>
 </div>
 
-<div class="monacode-helper monacode-haves" ng-repeat="have in $ctrl.haves">{{have}}</div>
+<a class="monacode-helper monacode-haves" ng-href="https://www.xing.com/search/members?keywords={{have}}" ng-repeat="have in $ctrl.haves" style="color: black; text-decoration: none">{{have}}</a>
