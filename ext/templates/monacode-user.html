@@ -1,6 +1,6 @@
 <div class="monacode-helper monacode-network-connect" ng-click="$ctrl.addToCRM()"><span class="monacode-helper monacode-btn-icon" ng-if="!$ctrl.user.inCRM">&lt;</span><span class="monacode-helper monacode-btn-icon" ng-if="$ctrl.user.inCRM">w</span>&nbsp;CRM</div>
 <div class="monacode-helper monacode-user-name">{{$ctrl.user.name}}</div>
-<div class="monacode-u-clearfix monacode-birthday" ng-if="$ctrl.user.birth_date != 'null-null-null'">
+<div class="monacode-u-clearfix monacode-birthday" ng-if="$ctrl.user.birth_date">
   <div class="monacode-helper monacode-network-icon">g</div>
   <div class="monacode-helper monacode-network-name">{{$ctrl.user.birth_date}}</div>
 </div>
