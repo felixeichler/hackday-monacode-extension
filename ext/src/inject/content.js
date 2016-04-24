@@ -94,9 +94,10 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
     API.getProfile(ctrl.email).then(
 
       function successCallback(response) {
-        if(response.name != null) {
+        if(response.user.name != null) {
+        ctrl.user = response.user;
+        ctrl.me = response.me;
 
-        ctrl.user = response;
         ctrl.user.active_email = ctrl.email;
         if(ctrl.user.wants)
           ctrl.user.wants = ctrl.user.wants.split(",");
@@ -216,7 +217,8 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
     var ctrl = this;
   },
   bindings: {
-    connections: '<'
+    me: '<',
+    user: '<'
   }
 })
 .component('monacodeSkills', {

@@ -493,8 +493,12 @@
   width: 70%;
 }
 
+.monacode-language-bar.monacode-language-good {
+  width: 50%;
+}
+
 .monacode-language-bar.monacode-language-basic {
-  width: 40%;
+  width: 30%;
 }
 
 .monacode-xing-container {
@@ -566,7 +570,7 @@ monacode>*{
 }
 
 .u5 {
-  overflow: auto !important; 
+  overflow: auto !important;
 }
 
 .u5::-webkit-scrollbar {

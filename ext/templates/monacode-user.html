@@ -1,15 +1,15 @@
-<div class="monacode-helper monacode-network-connect" ng-click="$ctrl.addToCRM()"><span class="monacode-helper monacode-btn-icon">&lt;</span>&nbsp;CRM</div>
+<div class="monacode-helper monacode-network-connect" ng-click="$ctrl.addToCRM()"><span class="monacode-helper monacode-btn-icon" ng-if="!$ctrl.user.inCRM">&lt;</span><span class="monacode-helper monacode-btn-icon" ng-if="$ctrl.user.inCRM">w</span>&nbsp;CRM</div>
 <div class="monacode-helper monacode-user-name">{{$ctrl.user.name}}</div>
-<div class="monacode-u-clearfix monacode-birthday">
+<div class="monacode-u-clearfix monacode-birthday" ng-if="$ctrl.user.birth_date != 'null-null-null'">
   <div class="monacode-helper monacode-network-icon">g</div>
-  <div class="monacode-helper monacode-network-name">Has Birthday today! {{$ctrl.user.birth_date}}</div>
+  <div class="monacode-helper monacode-network-name">{{$ctrl.user.birth_date}}</div>
 </div>
 <div class="monacode-u-clearfix monacode-wrapper"><img src="{{$ctrl.user.image}}" class="monacode-helper monacode-user-image">
   <div class="monacode-user-info-container">
     <div class="monacode-helper monacode-user-email">{{$ctrl.mail_username}}</div>
     <div class="monacode-helper monacode-user-company">@{{$ctrl.mail_domain}}</div>
     <div class="monacode-helper monacode-user-location" ng-if="$ctrl.user.profile_message">{{$ctrl.user.profile_message}}</div>
-    <div class="monacode-helper monacode-user-position">{{$ctrl.user.company.title}} at <span class="monacode-helper monacode-user-company">{{$ctrl.user.company.name}}</span>
+    <div class="monacode-helper monacode-user-position" ng-if="$ctrl.user.company.name">{{$ctrl.user.company.title}} at <span class="monacode-helper monacode-user-company">{{$ctrl.user.company.name}}</span>
     </div>
   </div>
 </div>
