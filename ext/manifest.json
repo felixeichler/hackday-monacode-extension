@@ -40,6 +40,7 @@
     "persistent": true
   },
   "web_accessible_resources": [
-    "templates/*"
+    "templates/*",
+    "fonts/*"
   ]
 }

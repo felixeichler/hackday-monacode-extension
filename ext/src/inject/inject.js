@@ -9,7 +9,7 @@ function findsidebar() {
 		console.log('sidebar div found', sidebarContainer);
 		findsidebartimeout = undefined;
 		//inject our thing into sidebar
-		var injectedElement = $('<div ng-app="monacode"><monacode></monacode></div>');
+		var injectedElement = $('<div ng-app="monacode" style="margin-top:12px;"><monacode></monacode></div>');
 		sidebarContainer.append(injectedElement);
 		console.log('injected element into sidebar',injectedElement);
 		
@@ -44,3 +44,13 @@ window.addEventListener("hashchange", function() {
 		findsidebar();
 	}
 }, false);
+
+
+//FONTS
+var fontstyle = document.createElement('style');
+fontstyle.innerHTML = 
+'@font-face {'+
+  "font-family: 'Mocaode';"+
+  "src: url('"+chrome.extension.getURL('fonts/mocaode.eot')+"') format('embedded-opentype'), url('"+chrome.extension.getURL('fonts/mocaode.woff')+"') format('woff'), url('"+chrome.extension.getURL('fonts/mocaode.ttf')+"') format('truetype');"+
+  'font-weight: 400;font-style: normal;}';
+document.head.appendChild(fontstyle);

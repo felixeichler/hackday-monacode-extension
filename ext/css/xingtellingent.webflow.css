@@ -1,6 +1,8 @@
 .monacode-body {
   max-width: 220px;
   min-width: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .monacode-helper {
@@ -45,6 +47,7 @@
 
 .monacode-helper.monacode-user-name {
   display: block;
+  max-width: 130px;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 22px;
@@ -53,7 +56,9 @@
 .monacode-helper.monacode-user-image {
   width: 80px;
   height: 80px;
-  float: left;
+  margin-right: 0px;
+  padding-right: 0px;
+  float: right;
   border-radius: 4px;
 }
 
@@ -62,7 +67,7 @@
 }
 
 .monacode-helper.monacode-user-company {
-  display: inline-block;
+  display: block;
   color: #8d8d8d;
   cursor: pointer;
 }
@@ -83,9 +88,11 @@
 
 .monacode-helper.monacode-network-icon {
   top: 3px;
+  margin-top: 2px;
   margin-right: 10px;
   float: left;
   font-family: Mocaode, sans-serif;
+  color: rgba(0, 0, 0, .2);
   font-size: 18px;
 }
 
@@ -102,20 +109,23 @@
 }
 
 .monacode-helper.monacode-network-name {
-  padding-top: 2px;
+  padding-top: 4px;
   padding-bottom: 2px;
-  float: left;
 }
 
 .monacode-helper.monacode-network-connect {
-  height: auto;
-  padding: 2px 8px;
+  height: 25px;
+  min-width: 80px;
+  padding: 5px 8px;
   float: right;
   border-radius: 2px;
   background-color: #448fff;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   color: #fff;
   font-size: 10px;
   font-weight: 400;
+  text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
@@ -124,6 +134,9 @@
 .monacode-helper.monacode-network-connect:hover {
   background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1));
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1));
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .monacode-helper.monacode-network-connect:active {
@@ -131,10 +144,39 @@
   background-image: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
 }
 
+.monacode-helper.monacode-network-connect.monacode-btn-twitter {
+  background-color: #55acee;
+}
+
+.monacode-helper.monacode-network-connect.monacode-btn-gplus {
+  background-color: #dd4b39;
+}
+
+.monacode-helper.monacode-network-connect.monacode-btn-xing {
+  background-color: #006567;
+}
+
+.monacode-helper.monacode-network-connect.monacode-btn-kununu {
+  background-color: #394b54;
+}
+
+.monacode-helper.monacode-network-connect.monacode-btn-kununu:hover {
+  box-shadow: none;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .monacode-helper.moancode-connections-detail {
-  margin-bottom: 10px;
+  display: block;
+  margin-top: 10px;
   font-size: 10px;
   line-height: 12px;
+}
+
+.monacode-helper.moancode-connections-detail.monacode-kununu-info {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .monacode-helper.moancode-connections-common-img {
@@ -144,10 +186,14 @@
   border-radius: 3px;
 }
 
+.monacode-helper.moancode-connections-common-img.monacode-nomargin {
+  margin-right: 0px;
+}
+
 .monacode-helper.monacode-network-connect-done {
   padding: 2px 8px;
   float: right;
-  color: #09ad8d;
+  color: #a8a8a8;
   font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -157,25 +203,201 @@
   font-family: Mocaode, sans-serif;
 }
 
-.monacode-user-info-container {
-  margin-left: 80px;
-  padding-top: 5px;
+.monacode-helper.monacode-connection {
+  display: block;
   padding-left: 10px;
+}
+
+.monacode-helper.monacode-connection-target {
+  display: block;
+}
+
+.monacode-helper.monacode-connection-user {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.monacode-helper.monacode-connection-second {
+  display: block;
+  padding-left: 30px;
+}
+
+.monacode-helper.monacode-connection-degree {
+  width: 25px;
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: #cfdc00;
+  font-size: 10px;
+  text-align: center;
+}
+
+.monacode-helper.monacode-skill {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: grey;
+  color: #fff;
+  font-size: 12px;
+}
+
+.monacode-helper.monacode-skill:hover {
+  background-color: #cfdc00;
+}
+
+.monacode-helper.monacode-kununu-logo {
+  top: -2px;
+  width: 80px;
+  margin-bottom: 10px;
+  float: right;
+  background-color: #fff;
+  opacity: 0.2;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  cursor: pointer;
+}
+
+.monacode-helper.monacode-kununu-logo:hover {
+  opacity: 1;
+}
+
+.monacode-helper.monacode-kununu-company {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.monacode-helper.monacode-haves {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: #e2e2e2;
+}
+
+.monacode-helper.monacode-haves:hover {
+  background-color: #cfdc00;
+}
+
+.monacode-helper.monacode-language {
+  z-index: 10;
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-radius: 3px;
+}
+
+.monacode-helper.monacode-language:hover {
+  background-color: transparent;
+}
+
+.monacode-helper.monacode-language.monacode-level {
+  margin-top: 5px;
+  margin-right: 4px;
+  padding: 0px 3px;
+  float: right;
+  background-color: rgba(0, 0, 0, .2);
+  color: #fff;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.monacode-helper.monacode-xing-features {
+  display: inline-block;
+  margin-bottom: 3px;
+  margin-left: 50px;
+  padding: 2px 8px;
+  float: left;
+  border-radius: 3px;
+  background-color: #cfdc00;
+}
+
+.monacode-helper.monacode-xing-features.monacode-first {
+  margin-top: 10px;
+}
+
+.monacode-helper.monacode-textarea {
+  display: block;
+  width: 100%;
+  min-height: 20px;
+  margin-top: -5px;
+  margin-bottom: 0px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+
+.monacode-helper.monacode-textarea:focus {
+  min-height: 120px;
+}
+
+.monacode-helper.monacode-state-saved {
+  min-width: 80px;
+  padding: 3px 12px 3px 8px;
+  float: right;
+  border-radius: 3px;
+  background-color: #99c613;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.monacode-user-info-container {
+  display: inline-block;
+  width: 130px;
+  margin-left: 0px;
+  padding-top: 5px;
+  float: left;
+}
+
+.monacode-user {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-container {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-container.monacode-no-line {
+  border-bottom-style: none;
 }
 
 .monacode-networks {
   margin-bottom: 10px;
-  border-bottom: 1px solid #e2e2e2;
 }
 
 .monacode-network {
   position: relative;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-network:hover {
+  background-color: #e2e2e2;
 }
 
 .monacode-connections {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-connections.monacode-disabeled {
+  display: none;
+}
+
+.monacode-skills {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e2e2e2;
@@ -185,9 +407,154 @@
   font-family: Mocaode, sans-serif;
 }
 
-@font-face {
-  font-family: 'Mocaode';
-  src: url('../fonts/mocaode.eot') format('embedded-opentype'), url('../fonts/mocaode.woff') format('woff'), url('../fonts/mocaode.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+.monacode-connection-line {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 2px solid #e2e2e2;
+  border-left: 2px solid #e2e2e2;
+  border-bottom-left-radius: 10px;
+}
+
+.monacode-connection-line.monacode-connection-line-right {
+  margin-right: 5px;
+  margin-bottom: -22px;
+  border-style: solid solid none none;
+  border-top-width: 2px;
+  border-top-color: #e2e2e2;
+  border-right-width: 2px;
+  border-right-color: #e2e2e2;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.monacode-kununu {
+  min-height: 80px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-kununu-score {
+  display: block;
+  overflow: hidden;
+  width: 80px;
+  margin-bottom: 10px;
+  float: right;
+  border: 1px solid #e9ecec;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.monacode-kununu-score-number {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.monacode-kununu-rating {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #99c613;
+  color: #fff;
+  font-size: 9px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.monacode-kununu-container {
+  display: inline-block;
+  max-width: 130px;
+  margin-left: 0px;
+  float: left;
+}
+
+.monacode-language {
+  position: relative;
+}
+
+.monacode-language:hover {
+  background-color: #e2e2e2;
+}
+
+.monacode-language-bar {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  right: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 21px;
+  border-radius: 3px;
+  background-color: #cfdc00;
+}
+
+.monacode-language-bar.monacode-language-fluent {
+  width: 70%;
+}
+
+.monacode-language-bar.monacode-language-basic {
+  width: 40%;
+}
+
+.monacode-xing-container {
+  position: relative;
+  min-height: 200px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.monacode-xing-btn-position {
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  right: 0px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.monacode-kununu-rate {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.monacode-kununu-rate:hover {
+  background-color: #e2e2e2;
+}
+
+.monacode-crm-btn {
+  width: 80px;
+}
+
+.main {
+  padding-left: 500px;
+}
+
+.monacode-title {
+  margin-bottom: 10px;
+}
+
+.monacode-location {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-weather {
+  margin-top: 10px;
+}
+
+.monacode-birthday {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.monacode-notes {
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #e2e2e2;
 }
