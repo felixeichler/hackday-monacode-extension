@@ -1,6 +1,8 @@
+<monacode-loader ng-if="!$ctrl.user">Loading...</monacode-loader>
+
 <monacode-user user="$ctrl.user" ng-if="$ctrl.user"></monacode-user>
 
-<monacode-notes notes="$ctrl.user.notes"></monacode-notes>
+<monacode-notes notes="$ctrl.user.notes" ng-if="$ctrl.user"></monacode-notes>
 
 <monacode-kununu company="$ctrl.user.company" ng-if="$ctrl.user.company"></monacode-kununu>
 

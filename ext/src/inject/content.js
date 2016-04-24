@@ -51,6 +51,29 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
 
   }
 
+  APIService.addToCRM = function(email) {
+    //return promise ($q) for asynchronous
+    return $q(function(resolve, reject) {
+      //build request url
+      var requestUrl = apiConfig.serverurl + 'addToCRM/' + encodeURIComponent(email);
+      console.log('POST '+requestUrl);
+
+      //fire request
+      $http.post(requestUrl).then(
+
+        function successCallback(response) {
+          //resolve promise
+          resolve(response.data.content);
+        },
+
+        function errorCallback(response) {
+          //reject promise
+          console.error('error while loading profile',response);
+          reject(response);
+        });
+    });
+  }
+
   return APIService;
 })
 .component('monacode', {
@@ -105,11 +128,20 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
 })
 .component('monacodeUser', {
   templateUrl: chrome.extension.getURL('templates/monacode-user.html'),
-  controller: function() {
+  controller: function(API) {
     var ctrl = this;
 
     ctrl.mail_username = ctrl.user.active_email.split("@")[0];
     ctrl.mail_domain = ctrl.user.active_email.split("@")[1];
+
+    ctrl.addToCRM = function() {
+      API.addToCRM(ctrl.user.active_email).then(function(){
+
+        console.log("sucessfull");
+        ctrl.user.inCRM = true;
+      }
+      )
+    }
   },
   bindings: {
     user: '<'
