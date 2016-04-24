@@ -10,7 +10,7 @@
 
 <monacode-networks networks="$ctrl.user.profiles" ng-if="$ctrl.user.profiles"></monacode-networks>
 
-<monacode-connections me="$ctrl.me" user="$ctrl.user"></monacode-connections>
+<monacode-connections me="$ctrl.me" user="$ctrl.user" ng-if="$ctrl.user"></monacode-connections>
 
 <monacode-skills skills="$ctrl.user.skills" ng-if="$ctrl.user.skills"></monacode-skills>
 
