@@ -38,7 +38,7 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
 
         function successCallback(response) {
           console.log('request response',response);
-          
+
           //resolve promise
           resolve(response.data.content);
         },
@@ -155,6 +155,20 @@ $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-
   templateUrl: chrome.extension.getURL('templates/monacode-networks.html'),
   controller: function() {
     var ctrl = this;
+
+    ctrl.xingConnected = false;
+    ctrl.twitterConnected = false;
+    ctrl.gplusConnected = false;
+
+    ctrl.connectXing = function() {
+      ctrl.xingConnected = !ctrl.xingConnected;
+    }
+    ctrl.connectTwitter = function() {
+      ctrl.twitterConnected = !ctrl.twitterConnected;
+    }
+    ctrl.connectGPlus = function() {
+      ctrl.gplusConnected = !ctrl.gplusConnected;
+    }
   },
   bindings: {
     networks: '<'

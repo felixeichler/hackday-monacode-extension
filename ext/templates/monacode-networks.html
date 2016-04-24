@@ -2,15 +2,19 @@
 <div class="monacode-u-clearfix monacode-network">
   <div class="monacode-helper monacode-network-icon monacode-color-xing">!</div>
   <div class="monacode-helper monacode-network-name">Xing</div>
-  <div class="monacode-helper monacode-network-connect monacode-btn-xing">Add</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-xing" ng-click="$ctrl.connectXing()" ng-if="!$ctrl.xingConnected">Add</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-xing" ng-click="$ctrl.connectXing()" ng-if="$ctrl.xingConnected">Added</div>
+
 </div>
 <div class="monacode-u-clearfix monacode-network">
   <div class="monacode-helper monacode-network-icon monacode-color-twitter">4</div>
   <div class="monacode-helper monacode-network-name">Twitter</div>
-  <div class="monacode-helper monacode-network-connect monacode-btn-twitter">Follow</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-twitter" ng-click="$ctrl.connectTwitter()" ng-if="!$ctrl.twitterConnected">Follow</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-twitter" ng-click="$ctrl.connectTwitter()" ng-if="$ctrl.twitterConnected">Following</div>
 </div>
 <div class="monacode-u-clearfix monacode-network">
   <div class="monacode-helper monacode-network-icon monacode-color-gplus">6</div>
   <div class="monacode-helper monacode-network-name">Google+</div>
-  <div class="monacode-helper monacode-network-connect monacode-btn-gplus">connect</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-gplus" ng-click="$ctrl.connectGPlus()" ng-if="!$ctrl.gplusConnected">connect</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-gplus" ng-click="$ctrl.connectGPlus()" ng-if="$ctrl.gplusConnected">connected</div>
 </div>
