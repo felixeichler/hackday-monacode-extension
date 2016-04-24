@@ -1,0 +1,12 @@
+<div class="monacode-u-clearfix monacode-title">
+    <div class="monacode-helper monacode-network-icon">k</div>
+    <div class="monacode-helper monacode-network-name">Notes</div>
+    <div class="monacode-helper monacode-state-saved" ng-show="$ctrl.saved" style="transition: 1.5s all ease-in-out"><span class="monacode-helper monacode-btn-icon">w</span>&nbsp;Saved</div>
+  </div>
+
+  <div class="w-form">
+    <form>
+      <textarea id="monacode-notes-input" placeholder="My notes about {{$ctrl.user.name}}" class="w-input monacode-helper monacode-textarea" ng-model="$ctrl.notes" ng-model-options='{debounce: 1000}'
+        ng-change='$ctrl.save()'></textarea>
+    </form>
+  </div>

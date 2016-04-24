@@ -558,3 +558,9 @@
   padding-bottom: 0px;
   border-bottom: 1px solid #e2e2e2;
 }
+
+monacode>*{
+  display: block;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px 0 ;
+}

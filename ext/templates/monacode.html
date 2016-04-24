@@ -1,5 +1,19 @@
-<monacode-user user="$ctrl.user"></monacode-user>
+<monacode-user user="$ctrl.user" ng-if="$ctrl.user"></monacode-user>
 
-<monacode-networks networks="$ctrl.user.networks"></monacode-networks>
+<monacode-notes notes="$ctrl.user.notes"></monacode-notes>
 
-<monacode-connections></monacode-connections>
+<monacode-kununu company="$ctrl.user.company" ng-if="$ctrl.user.company"></monacode-kununu>
+
+<monacode-location location="$location" ng-if="$location"></monacode-location>
+
+<monacode-networks networks="$ctrl.user.profiles" ng-if="$ctrl.user.profiles"></monacode-networks>
+
+<monacode-connections connections="$ctrl.user.connections" ng-if="$ctrl.user.connections"></monacode-connections>
+
+<monacode-skills skills="$ctrl.user.skills" ng-if="$ctrl.user.skills"></monacode-skills>
+
+<monacode-wants wants="$ctrl.user.wants" ng-if="$ctrl.user.wants"></monacode-wants>
+
+<monacode-haves haves="$ctrl.user.haves" ng-if="$ctrl.user.haves"></monacode-haves>
+
+<monacode-languages languages="$ctrl.user.languages" ng-if="$ctrl.user.languages"></monacode-languages>

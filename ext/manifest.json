@@ -41,6 +41,7 @@
   },
   "web_accessible_resources": [
     "templates/*",
-    "fonts/*"
+    "fonts/*",
+    "icons/*"
   ]
 }

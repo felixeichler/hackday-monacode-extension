@@ -1,0 +1,14 @@
+<div class="monacode-u-clearfix monacode-wrapper">
+  <div class="monacode-kununu-container">
+    <div class="monacode-helper monacode-kununu-company">{{$ctrl.company.name}}</div>
+    <div class="monacode-helper moancode-connections-detail monacode-kununu-info">Dieses Unternehmen im Vergleich zu allen anderen Unternehmen auf kununu auf Basis von {{$ctrl.user.company.reviews}} Bewertungen</div>
+  </div><img ng-src="{{$ctrl.kununuLogoUrl}}" class="monacode-helper monacode-kununu-logo">
+  <div class="monacode-kununu-score">
+    <div class="monacode-kununu-score-number">{{$ctrl.company.rating | number:1}}</div>
+    <div class="monacode-kununu-rating">Max 5</div>
+  </div>
+</div>
+<div class="monacode-u-clearfix monacode-kununu-rate">
+  <div class="monacode-helper monacode-network-name">Worked there?</div>
+  <div class="monacode-helper monacode-network-connect monacode-btn-kununu">Rate</div>
+</div>
